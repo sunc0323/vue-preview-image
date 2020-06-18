@@ -1,7 +1,7 @@
 import Preview from './preview.vue'
 
-const VueImageSwipe = {}
-VueImageSwipe.install = (Vue, options = {}) => {
+const VuePreviewImage = {}
+VuePreviewImage.install = (Vue, options = {}) => {
   const PreviewController = Vue.extend(Preview)
   PreviewController.prototype.close = function () {
     this.data = []
@@ -24,6 +24,6 @@ VueImageSwipe.install = (Vue, options = {}) => {
   }
 }
 if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(VueImageSwipe)
+  window.Vue.use(VuePreviewImage)
 }
-export default VueImageSwipe
+export default VuePreviewImage
